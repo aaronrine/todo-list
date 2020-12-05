@@ -22,11 +22,20 @@ export function List() {
     setItemList((oldItemList) => [...oldItemList, data]);
   }
 
+  function deleteItem(data) {
+    console.log(data);
+    setItemList((oldItemList) => {
+      return oldItemList.filter((item) => {
+        return item.name !== data.name;
+      });
+    });
+  }
+
   return (
     <div>
       <Form handleSubmit={handleSubmit} />
       {itemList.map((item) => {
-        return <ListItem item={item} key={item.name} />;
+        return <ListItem item={item} deleteItem={deleteItem} key={item.name} />;
       })}
     </div>
   );

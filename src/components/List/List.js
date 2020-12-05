@@ -15,10 +15,12 @@ export function List() {
   const [itemList, setItemList] = useState(data);
 
   function handleSubmit(data) {
-    console.log(data.name, data.is_done);
+    addItem(data);
   }
 
-  function addItem() {}
+  function addItem(data) {
+    setItemList((oldItemList) => [...oldItemList, data]);
+  }
 
   return (
     <div>

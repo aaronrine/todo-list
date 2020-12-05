@@ -1,4 +1,4 @@
-export function ListItem(item) {
+export function ListItem({ item }) {
   return (
     <div>
       <p>{item.name}</p>

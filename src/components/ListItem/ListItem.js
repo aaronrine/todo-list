@@ -1,8 +1,17 @@
-export function ListItem({ item, deleteItem }) {
+export function ListItem({ item, deleteItem, showUpdateForm }) {
   return (
     <div>
       <p>{item.name}</p>
       <p>{item.is_done}</p>
+      <p>{item.id}</p>
+      <button
+        type="button"
+        onClick={() => {
+          showUpdateForm(item);
+        }}
+      >
+        Edit
+      </button>
       <button
         type="button"
         onClick={() => {

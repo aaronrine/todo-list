@@ -1,4 +1,7 @@
+import { useState } from "react";
 export function ListItem({ item, deleteItem, showUpdateForm }) {
+  const [is_done, setIs_done] = useState(item.is_done);
+
   return (
     <div>
       <p>{item.name}</p>
@@ -20,6 +23,12 @@ export function ListItem({ item, deleteItem, showUpdateForm }) {
       >
         Delete
       </button>
+      <input
+        type="checkbox"
+        value="done"
+        checked={is_done}
+        onChange={() => setIs_done((prev) => !prev)}
+      />
     </div>
   );
 }

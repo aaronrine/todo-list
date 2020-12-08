@@ -33,12 +33,10 @@ export function List() {
   }
 
   function showUpdateForm(item) {
-    console.log(item);
     setFormItem(item);
   }
 
   function deleteItem(data) {
-    console.log(data);
     setItemList((oldItemList) => {
       return oldItemList.filter((item) => {
         return item.id !== data.id;

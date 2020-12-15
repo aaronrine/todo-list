@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ListItem } from "../ListItem/ListItem";
 import { Form } from "../Form/Form";
+import "./List.css";
 const data = [
   {
     name: "todo",
@@ -49,7 +50,7 @@ export function List() {
       prevItemList.map((item) => {
         console.log(item.id, updatedItem.id);
 
-        if (item.id != updatedItem.id) {
+        if (item.id !== updatedItem.id) {
           return item;
         }
         return updatedItem;
@@ -59,7 +60,7 @@ export function List() {
   }
 
   return (
-    <div>
+    <div className="List">
       <Form handleSubmit={handleSubmit} item={formItem} />
       {itemList.map((item) => {
         return (

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import "./Form.css";
+
 export function Form({ handleSubmit, item }) {
   const [name, setName] = useState("");
 
@@ -18,7 +20,8 @@ export function Form({ handleSubmit, item }) {
         setName("");
       }}
     >
-      <button type="submit">Submit</button>
+      <h3>Add a todo here</h3>
+      <button type="submit">Add</button>
       <input
         type="text"
         onChange={(e) => {

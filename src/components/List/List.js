@@ -1,66 +1,7 @@
-import { useState } from "react";
 import { ListItem } from "./ListItem";
-const data = [
-  {
-    name: "todo",
-    is_done: false,
-    id: 1,
-  },
-  {
-    name: "item",
-    is_done: true,
-    id: 2,
-  },
-  {
-    name: "the quick brown fox jumped over the lazy dog",
-    is_done: true,
-    id: 3,
-  },
-];
-export function List() {
-  const [itemList, setItemList] = useState(data);
-  const [formItem, setFormItem] = useState(null);
 
-  function handleSubmit(data) {
-    if (formItem) {
-      updateItem(data);
-    } else {
-      addItem(data);
-    }
-  }
-
-  function addItem(data) {
-    setItemList((oldItemList) => [
-      ...oldItemList,
-      { ...data, id: oldItemList.length + 1 },
-    ]);
-  }
-
-  function showUpdateForm(item) {
-    setFormItem(item);
-  }
-
-  function deleteItem(data) {
-    setItemList((oldItemList) => {
-      return oldItemList.filter((item) => {
-        return item.id !== data.id;
-      });
-    });
-  }
-
-  function updateItem(updatedItem) {
-    setItemList((prevItemList) =>
-      prevItemList.map((item) => {
-        console.log(item.id, updatedItem.id);
-
-        if (item.id !== updatedItem.id) {
-          return item;
-        }
-        return updatedItem;
-      })
-    );
-    setFormItem(null);
-  }
+export function List({ itemList = [], deleteItem, showUpdateForm }) {
+  
 
   return (
     <div className="List">

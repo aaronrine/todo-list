@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { ListItem } from "../ListItem/ListItem";
-import { Form } from "../Form/Form";
+import { ListItem } from "./ListItem";
 const data = [
   {
     name: "todo",
@@ -65,7 +64,6 @@ export function List() {
 
   return (
     <div className="List">
-      {/* <Form handleSubmit={handleSubmit} item={formItem} /> */}
       {itemList.map((item) => {
         return (
           <ListItem

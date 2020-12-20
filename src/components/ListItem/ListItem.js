@@ -15,24 +15,26 @@ export function ListItem({ item, deleteItem, showUpdateForm }) {
           checked={is_done}
           onChange={() => setIs_done((prev) => !prev)}
         />
-        <button
-          className="edit"
-          type="button"
-          onClick={() => {
-            showUpdateForm(item);
-          }}
-        >
-          Edit
-        </button>
-        <button
-          className="delete"
-          type="button"
-          onClick={() => {
-            deleteItem(item);
-          }}
-        >
-          Delete
-        </button>
+        <div className="buttons">
+          <button
+            className="edit"
+            type="button"
+            onClick={() => {
+              showUpdateForm(item);
+            }}
+          >
+            <i className="fas fa-pencil-alt"></i>
+          </button>
+          <button
+            className="delete"
+            type="button"
+            onClick={() => {
+              deleteItem(item);
+            }}
+          >
+            <i className="fas fa-trash"></i>
+          </button>
+        </div>
       </div>
     </div>
   );

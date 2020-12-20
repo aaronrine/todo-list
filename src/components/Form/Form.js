@@ -18,9 +18,9 @@ export function Form({ handleSubmit, item }) {
         });
         setName("");
       }}
+      className="Form"
     >
       <h3>Add a todo here</h3>
-      <button type="submit">Add</button>
       <input
         type="text"
         onChange={(e) => {
@@ -28,6 +28,9 @@ export function Form({ handleSubmit, item }) {
         }}
         value={name}
       />
+      <button type="submit">
+        <i className="fas fa-plus"></i>
+      </button>
     </form>
   );
 }

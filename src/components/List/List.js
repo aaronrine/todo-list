@@ -12,6 +12,11 @@ const data = [
     is_done: true,
     id: 2,
   },
+  {
+    name: "the quick brown fox jumped over the lazy dog",
+    is_done: true,
+    id: 3,
+  },
 ];
 export function List() {
   const [itemList, setItemList] = useState(data);
@@ -60,7 +65,7 @@ export function List() {
 
   return (
     <div className="List">
-      <Form handleSubmit={handleSubmit} item={formItem} />
+      {/* <Form handleSubmit={handleSubmit} item={formItem} /> */}
       {itemList.map((item) => {
         return (
           <ListItem

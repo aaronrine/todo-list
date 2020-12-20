@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ListItem } from "../ListItem/ListItem";
 import { Form } from "../Form/Form";
-import "./List.css";
 const data = [
   {
     name: "todo",

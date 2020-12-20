@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./Form.css";
 
 export function Form({ handleSubmit, item }) {
   const [name, setName] = useState("");

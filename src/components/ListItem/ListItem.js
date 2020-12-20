@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./ListItem.css";
 
 export function ListItem({ item, deleteItem, showUpdateForm }) {
   const [is_done, setIs_done] = useState(item.is_done);

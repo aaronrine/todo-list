@@ -1,0 +1,82 @@
+.List {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #36454f;
+}
+
+form {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+form h3 {
+  text-align: center;
+  color: white;
+}
+
+form button {
+  margin-right: 0.5rem;
+  outline: none;
+  border: none;
+  padding: 0.25rem 0.35rem;
+  border-radius: 0.5rem;
+}
+
+form button:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+form input {
+  padding: 0.2rem 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+form input:hover {
+  cursor: text;
+}
+.ListItem {
+  width: 30%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background: #708090;
+  border: solid 2px;
+  border-radius: 1rem;
+  margin: 0.25rem 0;
+}
+.ListItem .name {
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.ListItem .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ListItem .controls button {
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  width: 3rem;
+  padding: 0.25rem 0.25rem;
+  margin: 0.25rem 0;
+}
+
+.ListItem .controls button:hover {
+  opacity: 50%;
+}
+
+.ListItem .controls button:hover,
+input:hover {
+  cursor: pointer;
+}
+
+.ListItem .controls .delete {
+  color: white;
+  background: red;
+}

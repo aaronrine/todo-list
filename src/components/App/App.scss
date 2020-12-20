@@ -33,6 +33,7 @@
         input[type="checkbox"] {
           margin-right: 1rem;
           transform: scale(2);
+          cursor: pointer;
         }
         .buttons {
           display: flex;
@@ -42,16 +43,23 @@
             border-radius: 0.5rem;
             width: 2rem;
             padding: 0.5rem;
+            cursor: pointer;
           }
           button + button {
             margin-left: 0.25rem;
           }
           .edit {
             background: gold;
+            &:hover {
+              background: darkgoldenrod;
+            }
           }
           .delete {
             color: white;
             background: red;
+            &:hover {
+              background: darkred;
+            }
           }
         }
       }
@@ -70,7 +78,7 @@
       margin-left: 0.5rem;
       outline: none;
       border: none;
-      background: green;
+      background: lightgreen;
       color: white;
       width: 2rem;
       padding: 0.5rem;
@@ -78,7 +86,7 @@
 
       &:hover {
         cursor: pointer;
-        opacity: 50%;
+        background: green;
       }
     }
 

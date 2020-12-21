@@ -1,29 +1,16 @@
 import { useState } from "react";
-import List from "../List/List";
-import Form from "../Form/Form";
-import "./App.scss";
 
-const data = [
-  {
-    name: "todo",
-    is_done: false,
-    id: 1,
-  },
-  {
-    name: "item",
-    is_done: true,
-    id: 2,
-  },
-  {
-    name: "the quick brown fox jumped over the lazy dog",
-    is_done: true,
-    id: 3,
-  },
-];
+import { data } from "../../assets/data";
+import Form from "../Form/Form";
+import List from "../List/List";
+import useStateWithLocalStorage from "../../hooks/useStateWithLocalStorage";
+
+import "./App.scss";
 
 export function App() {
   const [formItem, setFormItem] = useState(null);
-  const [itemList, setItemList] = useState(data);
+  const [itemList, setItemList] = useStateWithLocalStorage("itemList", data);
+
   function handleSubmit(data) {
     if (formItem) {
       updateItem(data);

@@ -11,6 +11,21 @@ export function App() {
   const [formItem, setFormItem] = useState(null);
   const [itemList, setItemList] = useStateWithLocalStorage("itemList", data);
 
+  function addItem(data) {
+    setItemList((oldItemList) => [
+      ...oldItemList,
+      { ...data, id: oldItemList.length + 1 },
+    ]);
+  }
+
+  function deleteItem(data) {
+    setItemList((oldItemList) => {
+      return oldItemList.filter((item) => {
+        return item.id !== data.id;
+      });
+    });
+  }
+
   function handleSubmit(data) {
     if (formItem) {
       updateItem(data);
@@ -19,11 +34,8 @@ export function App() {
     }
   }
 
-  function addItem(data) {
-    setItemList((oldItemList) => [
-      ...oldItemList,
-      { ...data, id: oldItemList.length + 1 },
-    ]);
+  function showUpdateForm(item) {
+    setFormItem(item);
   }
 
   function updateItem(updatedItem) {
@@ -38,17 +50,6 @@ export function App() {
       })
     );
     setFormItem(null);
-  }
-
-  function deleteItem(data) {
-    setItemList((oldItemList) => {
-      return oldItemList.filter((item) => {
-        return item.id !== data.id;
-      });
-    });
-  }
-  function showUpdateForm(item) {
-    setFormItem(item);
   }
 
   return (

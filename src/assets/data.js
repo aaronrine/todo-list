@@ -1,16 +1,16 @@
 export const data = [
   {
-    name: "todo",
+    name: "These todos are examples",
     is_done: false,
     id: 1,
   },
   {
-    name: "item",
+    name: "They help show what each todo looks like",
     is_done: true,
     id: 2,
   },
   {
-    name: "the quick brown fox jumped over the lazy dog",
+    name: "and lets you play with them",
     is_done: true,
     id: 3,
   },

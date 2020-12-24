@@ -1,11 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export function Form({ handleSubmit, item }) {
+export function Form({ handleSubmit }) {
   const [name, setName] = useState("");
-
-  useEffect(() => {
-    setName(item ? item.name : "");
-  }, [item]);
 
   return (
     <form
@@ -13,8 +9,8 @@ export function Form({ handleSubmit, item }) {
         e.preventDefault();
         handleSubmit({
           name,
-          is_done: item ? item.is_done : false,
-          id: item ? item.id : -1,
+          is_done: false,
+          id: -1,
         });
         setName("");
       }}

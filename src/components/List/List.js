@@ -1,8 +1,6 @@
 import { ListItem } from "./ListItem";
 
-export function List({ itemList = [], deleteItem, showUpdateForm }) {
-  
-
+export function List({ itemList = [], deleteItem, updateItem }) {
   return (
     <div className="List">
       {itemList.map((item) => {
@@ -10,7 +8,7 @@ export function List({ itemList = [], deleteItem, showUpdateForm }) {
           <ListItem
             item={item}
             deleteItem={deleteItem}
-            showUpdateForm={showUpdateForm}
+            updateItem={updateItem}
             key={item.id}
           />
         );

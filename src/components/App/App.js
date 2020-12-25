@@ -1,8 +1,8 @@
-import Todo from "../Todo/Todo";
+import TodoList from "../TodoList/TodoList";
 export function App() {
   return (
     <div className="App">
-      <Todo />
+      <TodoList />
     </div>
   );
 }

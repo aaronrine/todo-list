@@ -1,7 +1,7 @@
-import { data } from "../../assets/data";
-import Form from "../Form/Form";
-import List from "../List/List";
-import useStateWithLocalStorage from "../../hooks/useStateWithLocalStorage";
+import { data } from "../../../assets/data";
+import Form from "./Form/Form";
+import List from "./List/List";
+import useStateWithLocalStorage from "../../../hooks/useStateWithLocalStorage";
 
 import "./Todo.scss";
 

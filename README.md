@@ -3,7 +3,8 @@
 This is my ToDo app. There are many like it, but this one is mine.
 I'm using this app as a stepping stone toward a few more sophisticated apps such as Trello clones and bug trackers.
 
-![](src/assets/todo-app.png)
+![Desktop](src/assets/todo-app.png)
+![Mobile](src/assets/todo-app-responsive.png)
 
 ## Clone the Repo
 
